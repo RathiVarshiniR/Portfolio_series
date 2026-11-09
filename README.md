@@ -41,7 +41,7 @@ The static site is written to `dist/` and can be deployed as-is to Vercel, Netli
 | Profile order (Recruiter / Developer / Creative) | `viewerProfiles` |
 | Opening studio card text | `profile.originalLabel` |
 
-**Resume:** replace `public/assets/Sushmita_Dasari_Resume.pdf`.
+**Resume:** replace `public/assets/Rathi_Varshini_R.pdf`.
 
 **Photo:** replace `pic1.jpeg` (high-res photo) and `pic.png` (background-removed cutout with the same framing), then run:
 

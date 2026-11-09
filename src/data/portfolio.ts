@@ -7,60 +7,71 @@
 export type Palette = { from: string; via: string; to: string; accent: string };
 
 export const profile = {
-  fullName: 'Dasari Venkata Ratna Sri Sushmita',
-  displayName: 'Sushmita Dasari',
-  firstName: 'SUSHMITA',
+  fullName: 'Rathi Varshini R',
+  displayName: 'Rathi Varshini R',
+  firstName: 'RATHI',
   seriesTag: 'THE SERIES',
   /** Fictional studio card shown at the very start of the opening sequence. */
-  originalLabel: 'A DASARI ORIGINAL',
-  role: 'Full-Stack Developer',
-  tagline: ['Full-Stack Developer', 'AI / ML', 'Java'],
+  originalLabel: 'A RATHI ORIGINAL',
+  role: 'Software Developer',
+  tagline: ['Software Developer', 'AI / ML', 'C++', 'Java', 'Python', 'React', 'Node.js', 'Docker'],
   intro:
-    'A B.Tech Artificial Intelligence & Machine Learning student (CGPA 9.10) and full-stack developer building AI-powered platforms, payment systems and multi-tenant SaaS with Java, Python, React, Node.js and Docker.',
-  location: 'Surampalem, Andhra Pradesh',
-  email: 'sushmitadasari17@gmail.com',
+    'A B.E. Computer Science (Artificial Intelligence & Machine Learning) student (CGPA 8.40) and software developer driven by curiosity, problem-solving, and building impactful technology solutions.',
+  location: 'Coimbatore, Tamil Nadu',
+  email: 'varshini.rathi.r@gmail.com',
   links: {
-    linkedin: 'https://www.linkedin.com/in/sushmita-dasari-227a40284/',
-    github: 'https://github.com/Sushmitadasari',
+    linkedin: 'https://www.linkedin.com/in/rathi-varshini-r',
+    github: 'https://github.com/RathiVarshiniR',
   },
-  resumePdf: '/assets/Sushmita_Dasari_Resume.pdf',
+  resumePdf: '/assets/Rathi_Varshini_R.pdf',
   portrait: {
     src: '/assets/portrait-720.webp',
     srcSet: '/assets/portrait-420.webp 420w, /assets/portrait-720.webp 720w, /assets/portrait-1100.webp 1100w',
-    alt: 'Portrait of Sushmita Dasari',
+    alt: 'Portrait of Rathi Varshini R',
   },
-  interests: ['System Design', 'Cloud Computing (AWS)', 'Machine Learning'],
+  interests: ['Artificial Intelligence', 'Cloud Computing (AWS)', 'Machine Learning', 'System Design'],
 };
 
 export const education = [
   {
-    school: 'Aditya Engineering College',
-    place: 'Surampalem',
-    degree: 'Bachelor of Technology — Artificial Intelligence and Machine Learning',
-    period: 'October 2023 – Present',
-    score: 'CGPA 9.10',
+    school: 'KIT-Kalaignarkarunanidhi Institute of Technology',
+    place: 'Coimbatore',
+    degree: 'Bachelor of Engineering — Artificial Intelligence and Machine Learning',
+    period: 'September 2024 – Present',
+    score: 'CGPA 8.40',
   },
   {
-    school: 'Sri Chaitanya Junior College',
-    place: 'Kakinada',
-    degree: 'BIEAP — MPC',
-    period: 'June 2021 – May 2023',
-    score: 'Score 925/1000',
+    school: 'GVK Vidhya Mandhir',
+    place: 'Coimbatore',
+    degree: 'HSC — Mathematics, Physics and Chemistry',
+    period: 'June 2022 – May 2023',
+    score: 'Score 1,034/1200',
   },
 ];
 
 export const experience = [
   {
-    company: 'Technical Hub Pvt Ltd',
-    role: 'Trainee',
-    place: 'Surampalem, AP',
-    period: 'May 2025 – June 2026',
-    points: [
-      'Completed one year of intensive Full-Stack Development (FSD) training covering frontend, backend, database integration, and deployment workflows.',
-      'Developed responsive and functional web applications by implementing user interfaces, server-side logic, and database connectivity.',
-      'Deployed and managed web applications while applying version control, debugging, and end-to-end development practices.',
-    ],
+  company: 'DecodeLabs',
+  role: 'Cloud Computing Intern',
+  place: 'Lucknow, India',
+  period: 'May 2026',
+  points: [
+    'Independently provisioned four AWS workloads for business scenarios: S3 static hosting, an EC2 web server, a DynamoDB database, and a serverless Lambda API.',
+    'Administered an Ubuntu server over SSH, performing system updates, Apache configuration, and service management.',
+    'Validated serverless application behaviour and monitored execution logs using AWS CloudWatch.',
+  ],
   },
+  {
+  company: 'Thiranex',
+  role: 'Full Stack Developer Intern',
+  place: 'Chennai, India',
+  period: 'May 2026',
+  points: [
+    'Independently designed, developed, and deployed four full-stack web applications: a portfolio, task manager, e-commerce platform, and blog.',
+    'Built responsive frontend interfaces using React.js and developed backend services using Node.js and Express REST APIs.',
+    'Managed end-to-end deployment, hosting React applications on Vercel and Node.js backends on Render.',
+  ],
+},
 ];
 
 export type Metric = { value: string; label: string };
@@ -78,95 +89,129 @@ export type Project = {
   /** Omit when the repository isn't public — the GitHub button is hidden instead of linking to a 404. */
   github?: string;
   palette: Palette;
-  motif: 'shield' | 'flow' | 'tenants';
+  motif: 'shield' | 'flow' | 'tenants' | 'cart';
 };
 
 export const projects: Project[] = [
   {
-    id: 'policyguard-ai',
-    title: 'PolicyGuard AI',
-    year: '2026',
-    genre: 'AI • NLP • LLM',
-    logline: 'An AI-powered policy analysis platform across web, browser extension, mobile and desktop applications.',
-    stack: ['Python', 'NLP', 'LLM', 'REST API'],
-    build: [
-      'Built an AI-powered policy analysis platform across web, browser extension, mobile, and desktop applications, processing 500+ policy documents with 92% accuracy and reducing manual review time by 60% across 8 policy categories.',
-      'Engineered LLM-based Q&A, key-information extraction, and REST API integration for 10+ document types, enabling real-time policy insights and reducing decision turnaround time by 45%.',
-    ],
-    features: [
-      'LLM-based Q&A over policy documents',
-      'Key-information extraction',
-      'REST API integration for 10+ document types',
-      'Web, browser extension, mobile & desktop apps',
-      'Real-time policy insights',
-    ],
-    metrics: [
-      { value: '500+', label: 'policy documents processed' },
-      { value: '92%', label: 'accuracy' },
-      { value: '60%', label: 'less manual review time' },
-      { value: '45%', label: 'faster decision turnaround' },
-      { value: '8', label: 'policy categories' },
-    ],
-    // The resume links to https://github.com/Sushmitadasari/PolicyGuard-AI, which is not public yet (404).
-    // Add `github: 'https://github.com/Sushmitadasari/PolicyGuard-AI',` back once the repo is public.
-    palette: { from: '#2a0610', via: '#7a0f24', to: '#0b0710', accent: '#ff3d5a' },
-    motif: 'shield',
+  id: 'meaning',
+  title: 'Meaning',
+  year: '2026',
+  genre: 'AI • NLP • RAG',
+  logline: 'A hybrid semantic search engine that understands the meaning behind queries and retrieves relevant information using vector and keyword search.',
+  stack: [
+    'Python',
+    'FastAPI',
+    'React',
+    'FAISS',
+    'BM25',
+    'Sentence Transformers',
+    'RAG'
+  ],
+  build: [
+    'Built an end-to-end semantic search engine that embeds 26,872 customer-support records using all-MiniLM-L6-v2 and retrieves relevant results through a cached FAISS index.',
+    'Implemented hybrid ranking by combining normalized semantic and BM25 scores, along with a RAG endpoint that grounds LLM-generated answers in retrieved records.',
+    'Developed an evaluation framework using Top-1, Top-3, Mean Reciprocal Rank (MRR), and query latency. Achieved 100% Top-1 accuracy compared to 24% for BM25 on a 25-query labelled test set.'
+  ],
+  features: [
+    'Semantic search using sentence embeddings',
+    'FAISS-based vector similarity retrieval',
+    'Hybrid semantic and BM25 ranking',
+    'RAG-based question answering',
+    'Interactive React interface',
+    't-SNE embedding visualisation',
+    'Search evaluation and latency analysis'
+  ],
+  metrics: [
+    { value: '26,872', label: 'records indexed' },
+    { value: '100%', label: 'semantic Top-1 accuracy' },
+    { value: '24%', label: 'BM25 Top-1 accuracy' },
+    { value: '1.00', label: 'Mean Reciprocal Rank' },
+    { value: '~22 ms', label: 'query latency' }
+  ],
+  github: 'https://github.com/RathiVarshiniR/Semantic-Search-Engine-Project',
+  palette: {
+    from: '#102a43',
+    via: '#245b78',
+    to: '#071827',
+    accent: '#55c2d9'
   },
+  motif: 'flow',
+},
   {
-    id: 'payment-gateway',
-    title: 'Payment Gateway System',
-    year: '2026',
-    genre: 'Full-Stack • Fintech • Microservices',
-    logline: 'A full-stack UPI & card payment gateway built around a strict payment state machine.',
-    stack: ['Node.js', 'Express', 'PostgreSQL', 'React', 'Docker'],
-    build: [
-      'Built full-stack UPI & card payment gateway processing 1,000+ transactions at 99.8% uptime with a strict payment state machine (processing → success/failed).',
-      'Dockerized microservice architecture cut deployment setup by 70%; backend optimizations reduced API response time by 40% and tripled throughput under load.',
-    ],
-    features: [
-      'UPI & card payments',
-      'Strict payment state machine (processing → success / failed)',
-      'Dockerized microservice architecture',
-      'Backend optimizations for load',
-    ],
-    metrics: [
-      { value: '1,000+', label: 'transactions processed' },
-      { value: '99.8%', label: 'uptime' },
-      { value: '70%', label: 'less deployment setup' },
-      { value: '40%', label: 'faster API response' },
-      { value: '3×', label: 'throughput under load' },
-    ],
-    github: 'https://github.com/Sushmitadasari/Payment-gateway-system-Project',
-    palette: { from: '#1a0d02', via: '#8a4a07', to: '#0a0806', accent: '#ffb547' },
-    motif: 'flow',
+  id: 'shopnow',
+  title: 'ShopNow',
+  year: '2026',
+  genre: 'Full-Stack • E-Commerce • MERN',
+  logline: 'A full-stack e-commerce platform featuring role-based access, persistent shopping carts, product management and complete order lifecycle handling.',
+  stack: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT'],
+  build: [
+    'Architected a MERN-based e-commerce platform with JWT role-based authentication for Admin and User accounts, persistent shopping cart, searchable product catalogue with category filtering, sorting and pagination.',
+    'Developed an admin dashboard for managing products, orders and users, with a complete order lifecycle covering stock validation, automatic stock deduction, order status updates and cancellation with stock restoration.',
+    'Implemented payment-status tracking and server-side 18% GST calculation to support consistent order processing.'
+  ],
+  features: [
+    'JWT-based Admin and User authentication',
+    'Persistent shopping cart',
+    'Searchable product catalogue',
+    'Category filtering, sorting and pagination',
+    'Admin dashboard for products, orders and users',
+    'Complete order lifecycle management',
+    'Automatic stock deduction and restoration',
+    'Payment-status tracking and GST calculation'
+  ],
+  metrics: [
+    { value: '2', label: 'user roles' },
+    { value: '18%', label: 'server-side GST calculation' },
+    { value: '5', label: 'major order stages' }
+  ],
+  github: 'https://github.com/RathiVarshiniR/E-Commerce-Application',
+  palette: {
+    from: '#102b25',
+    via: '#176b50',
+    to: '#071711',
+    accent: '#55d6a5'
   },
+  motif: 'cart',
+},
   {
-    id: 'multi-tenant-saas',
-    title: 'Multi-Tenant SaaS Platform',
-    year: '2026',
-    genre: 'SaaS • Security • DevOps',
-    logline: 'Shared-database multi-tenancy with strict tenant isolation and 4-level JWT/RBAC.',
-    stack: ['Node.js', 'React', 'PostgreSQL', 'Docker Compose'],
-    build: [
-      'Architected shared-database multi-tenancy for 50+ concurrent tenants with strict tenant_id isolation and 4-level JWT/RBAC, achieving zero unauthorized-access incidents across 200+ users.',
-      'Implemented Docker Compose one-command deployment, reducing environment setup time from 45 minutes to under 2 minutes.',
-    ],
-    features: [
-      'Shared-database multi-tenancy',
-      'Strict tenant_id isolation',
-      '4-level JWT / RBAC',
-      'One-command Docker Compose deployment',
-    ],
-    metrics: [
-      { value: '50+', label: 'concurrent tenants' },
-      { value: '200+', label: 'users' },
-      { value: '0', label: 'unauthorized-access incidents' },
-      { value: '45m → <2m', label: 'environment setup time' },
-    ],
-    github: 'https://github.com/Sushmitadasari/Multi-Tenant-SaaS-Platform',
-    palette: { from: '#04121f', via: '#0f4c6e', to: '#05080d', accent: '#4cc9ff' },
-    motif: 'tenants',
+  id: 'fairshare',
+  title: 'FairShare',
+  year: '2026',
+  genre: 'Full-Stack • Algorithms • Data Management',
+  logline: 'A group accountability system that evaluates individual contributions through weighted fairness scoring and structured task management.',
+  stack: ['Python', 'Flask', 'SQLite', 'SQLAlchemy'],
+  build: [
+    'Designed a weighted fairness-scoring algorithm to evaluate individual contributions based on task completion (40%), on-time rate (30%), activity (20%) and peer ratings (10%).',
+    'Engineered a normalized seven-table database schema using SQLAlchemy ORM, implementing complete CRUD operations for structured data management.',
+    'Secured user authentication and session management using Flask-Login and Werkzeug password hashing.'
+  ],
+  features: [
+    'Weighted fairness-scoring algorithm',
+    'Task completion tracking',
+    'On-time performance evaluation',
+    'Activity-based contribution tracking',
+    'Peer rating mechanism',
+    'Normalized seven-table database schema',
+    'CRUD operations',
+    'Secure session-based authentication'
+  ],
+  metrics: [
+    { value: '40%', label: 'task completion weight' },
+    { value: '30%', label: 'on-time rate weight' },
+    { value: '20%', label: 'activity weight' },
+    { value: '10%', label: 'peer rating weight' },
+    { value: '7', label: 'database tables' }
+  ],
+  github: 'https://github.com/RathiVarshiniR/FairShare',
+  palette: {
+    from: '#172b1c',
+    via: '#347347',
+    to: '#09140d',
+    accent: '#8bd69a'
   },
+  motif: 'flow',
+},
 ];
 
 export type Achievement = {
@@ -180,62 +225,62 @@ export type Achievement = {
 
 export const achievements: Achievement[] = [
   {
-    id: 'algouniversity',
-    title: 'Tech Fellow',
-    org: 'AlgoUniversity',
-    detail: 'Selected through competitive national selection — advanced DSA, algorithm optimization, and competitive coding.',
-    laurel: 'National Selection',
+    id: 'academic-rank',
+    title: 'Academic Excellence',
+    org: 'KIT-CBE',
+    detail: 'Secured a position among the top 5 CGPA holders in the class with an overall CGPA of 8.40/10.',
+    laurel: 'Top 5 CGPA Holder',
   },
   {
-    id: 'flipkart-grid',
-    title: 'Semi-Finalist',
-    org: 'Flipkart GRiD 7.0',
-    detail: 'Competed among top national engineering talent.',
-    laurel: 'Semi-Finalist',
-    link: 'https://drive.google.com/file/d/16pXA2hssyJqlYMr27wfi6U4bjKDLvh9f/view?usp=drive_link',
+    id: 'codechef',
+    title: 'Competitive Programmer',
+    org: 'CodeChef',
+    detail: 'Solved 450+ coding problems, building strong problem-solving skills through consistent competitive programming practice.',
+    laurel: '450+ Problems Solved',
   },
   {
-    id: 'branch-topper',
-    title: 'AIML Branch Topper',
-    org: 'B.Tech AI & ML',
-    detail: '9.24 SGPA for the semester.',
-    laurel: 'Branch Topper',
+    id: 'leetcode',
+    title: 'Problem Solving Achievement',
+    org: 'LeetCode',
+    detail: 'Achieved a maximum contest rating of 1637, ranking among the top 19.74% of users globally with 100+ problems solved.',
+    laurel: 'Top 19.74% Globally',
   },
   {
-    id: 'competitive-coding',
-    title: '850+ Problems Solved',
-    org: 'LeetCode • GFG • CodeChef',
-    detail: 'LeetCode: 350+ DSA problems (peak rating 1442). GFG: 300+ problems (rating 1436). CodeChef: 200+ problems.',
-    laurel: 'Competitive Coding',
+    id: 'salesforce',
+    title: 'Agentblazer Champion',
+    org: 'Salesforce Trailhead',
+    detail: 'Completed 48+ Trailhead badges covering platform fundamentals, Agentforce and AI-driven automation.',
+    laurel: 'Agentblazer Champion 2025',
   },
   {
-    id: 'hackerrank',
-    title: '5-Star Badges',
-    org: 'HackerRank',
-    detail: '5-star badges in C, Python, Java, and SQL.',
-    laurel: 'Four Languages',
+    id: 'leadership',
+    title: 'Student Leadership & Representation',
+    org: 'KIT College of Technology',
+    detail: 'Represented 60+ first-year students as their sole liaison with faculty, demonstrating leadership and communication skills.',
+    laurel: 'Student Representative',
   },
 ];
 
 export type Certification = { issuer: string; name: string; link: string };
 
 export const certifications: Certification[] = [
-  { issuer: 'NPTEL', name: 'Database Management System', link: 'https://drive.google.com/file/d/1MqkJHchXeaGD4S8mzPmEGxEYddAsxAjN/view?usp=drive_link' },
-  { issuer: 'NPTEL', name: 'Fundamentals of Artificial Intelligence', link: 'https://drive.google.com/file/d/1GqyUQ-lrE-bHaN457t6fIdssgGG4HMXf/view?usp=drive_link' },
-  { issuer: 'NPTEL', name: 'Deep Learning', link: 'https://drive.google.com/file/d/1PWSRP5SQDPzkoTCF3A24eIJoSpTwgsff/view?usp=sharing' },
-  { issuer: 'AWS', name: 'AWS Certified AI Practitioner', link: 'https://drive.google.com/file/d/1h8e5p0a9T6f5gBaOP2ROfwWHZfkkspGn/view?usp=drive_link' },
-  { issuer: 'AWS', name: 'AWS Academy Graduate – Cloud Foundations', link: 'https://www.credly.com/badges/2d4810f9-3dbe-444d-99b9-61312ea5e7df/public_url' },
-  { issuer: 'MongoDB', name: 'MongoDB Certified Associate Developer', link: 'https://www.credly.com/badges/fd3362bd-743a-4c4d-a68e-b1fdc5d46811/public_url' },
-  { issuer: 'GitHub', name: 'GitHub Foundations', link: 'https://drive.google.com/file/d/1o0fkCAMRWTg1oMwxlqu6t6wnOpBv66Vq/view?usp=sharing' },
-  { issuer: 'Pearson', name: 'IT Specialist – HTML and CSS', link: 'https://www.credly.com/badges/e4a55298-e396-41d8-a032-283aafe9fab7/public_url' },
-  { issuer: 'Oracle', name: 'Java Certified Foundations Associate', link: 'https://drive.google.com/file/d/1g-yyceHtLg_k2RWiOIJqH0MMcGlaH90P/view?usp=sharing' },
-  { issuer: 'Oracle', name: 'Oracle Certified Foundations Associate – Database', link: 'https://drive.google.com/file/d/10-DzabbcH2vHrI6bAohoT8czKRZMa2kV/view?usp=drive_link' },
-  { issuer: 'Cisco', name: 'HTML Essentials', link: 'https://www.credly.com/badges/eb27ca95-3b2a-4948-bef9-0385d1d49055/public_url' },
-  { issuer: 'Cisco', name: 'CSS Essentials', link: 'https://www.credly.com/badges/3b37497f-6a61-4889-af3c-ed337a460a0b/public_url' },
-  { issuer: 'Cisco', name: 'JavaScript Essentials 1', link: 'https://www.credly.com/badges/9cdd4d55-6ecc-463f-b254-811ccdd0539c/public_url' },
-  { issuer: 'Cisco', name: 'JavaScript Essentials 2', link: 'https://www.credly.com/badges/0e1b036e-4318-4c8e-b750-2aca77314442/public_url' },
-  { issuer: 'Cisco', name: 'Python Essentials 1', link: 'https://www.credly.com/badges/0e21e3eb-d8ef-4770-95d7-dcbd6f8696b1/public_url' },
-  { issuer: 'Udemy', name: 'Microsoft Azure Hands-On Training (AZ-900, AZ-104, AZ-305)', link: 'https://drive.google.com/file/d/1KrXClhY0nJ3Acxs7DioNf4Q1rpaMvgPT/view?usp=sharing' },
+  { issuer: 'NPTEL', name: 'Algorithmic Graph Theory and Data Structures', link: 'https://drive.google.com/file/d/1Y3GGtF6o2i4wBNV4XQw0a_FZ_PYwDR21/view?usp=drive_link' },
+
+  { issuer: 'Infosys Springboard', name: 'Introduction to Robotic Process Automation', link: 'https://drive.google.com/file/d/16NCqIBNdiFr5W77VU3g1d2q75xEfnuQm/view?usp=drive_link' },
+
+  { issuer: 'Infosys Springboard', name: 'Artificial Intelligence Primer Certification', link: 'https://drive.google.com/file/d/1D2nwsJTrRfFudNyUh__aUnElhP4ZLwBF/view?usp=drive_link' },
+
+  { issuer: 'Infosys Springboard', name: 'Computer Vision', link: 'https://drive.google.com/file/d/1pJrG3zJXQMR_jI_EAF3wlJARgrNCCIRH/view?usp=drive_link' },
+
+  { issuer: 'SkillSoft', name: 'Oracle Cloud Infrastructure Foundations Architect', link: 'https://drive.google.com/file/d/1enpl_Q7hYXJNerDwMY_r7xf0IUebIo-6/view?usp=drive_link' },
+
+  { issuer: 'Cisco Networking Academy', name: 'Applied AI for Customer Review Analysis', link: 'https://drive.google.com/file/d/1Vdl46ONericBYfO3Fl5Qr6eJuEWkuIlh/view?usp=drivesdk' },
+
+  { issuer: 'Infosys Springboard', name: 'Artificial Intelligence Foundation', link: 'https://drive.google.com/file/d/1D2nwsJTrRfFudNyUh__aUnElhP4ZLwBF/view?usp=drivesdk' },
+
+  { issuer: 'Cisco Networking Academy', name: 'Introduction to Modern AI', link: 'https://drive.google.com/file/d/1DNSXups6UuoPWcIoJpfMYx26fTbizzml/view?usp=drivesdk' },
+
+  { issuer: 'AWS Academy', name: 'AWS Academy Graduate – Cloud Foundations (20 Hours)', link: 'https://drive.google.com/file/d/1H8LDfssOnJ9rCTQTn7XZSc7PFILqjl1z/view?usp=drivesdk' },
 ];
 
 export type Skill = { name: string; mono: string; note?: string };
@@ -243,84 +288,99 @@ export type SkillCategory = { id: string; title: string; subtitle: string; skill
 
 export const skillCategories: SkillCategory[] = [
   {
-    id: 'languages',
-    title: 'Languages',
-    subtitle: 'Java is the primary language',
-    skills: [
-      { name: 'Java', mono: 'Jv', note: 'Primary' },
-      { name: 'Python', mono: 'Py' },
-      { name: 'C', mono: 'C' },
-      { name: 'C++', mono: 'C+' },
-    ],
+  id: 'languages',
+  title: 'Languages',
+  subtitle: 'C++ and Python are primary languages',
+  skills: [
+    { name: 'C++', mono: 'C+', note: 'Primary' },
+    { name: 'Python', mono: 'Py', note: 'Primary' },
+    { name: 'JavaScript', mono: 'JS' },
+    { name: 'TypeScript', mono: 'TS' },
+    { name: 'SQL', mono: 'SQL' },
+    { name: 'Bash', mono: 'Sh' },
+  ],
   },
   {
-    id: 'frontend',
-    title: 'Frontend',
-    subtitle: 'Interfaces & the web platform',
-    skills: [
-      { name: 'React', mono: 'Re' },
-      { name: 'HTML', mono: 'Ht' },
-      { name: 'CSS', mono: 'Cs' },
-      { name: 'JavaScript', mono: 'Js' },
-    ],
-  },
+  id: 'frontend',
+  title: 'Frontend',
+  subtitle: 'Modern web interfaces & development',
+  skills: [
+    { name: 'React.js', mono: 'Re' },
+    { name: 'Next.js', mono: 'Nx' },
+    { name: 'HTML', mono: 'Ht' },
+    { name: 'CSS', mono: 'Cs' },
+    { name: 'Tailwind CSS', mono: 'Tw' },
+    { name: 'JavaScript', mono: 'Js' },
+    { name: 'TypeScript', mono: 'Ts' },
+  ],
+},
   {
-    id: 'backend',
-    title: 'Backend',
-    subtitle: 'Server-side logic',
-    skills: [
-      { name: 'Node.js', mono: 'No' },
-      { name: 'Express.js', mono: 'Ex' },
-    ],
-  },
+  id: 'backend',
+  title: 'Backend',
+  subtitle: 'Server-side development & API engineering',
+  skills: [
+    { name: 'Node.js', mono: 'No' },
+    { name: 'Express.js', mono: 'Ex' },
+    { name: 'Python', mono: 'Py' },
+    { name: 'FastAPI', mono: 'Fa' },
+    { name: 'Flask', mono: 'Fl' },
+    { name: 'REST APIs', mono: 'API' },
+    { name: 'JWT', mono: 'JW' },
+  ],
+},
   {
-    id: 'infra',
-    title: 'Infra & Tools',
-    subtitle: 'Shipping & architecture',
-    skills: [
-      { name: 'Docker', mono: 'Dk' },
-      { name: 'Docker Compose', mono: 'Dc' },
-      { name: 'REST APIs', mono: 'Ap' },
-      { name: 'Microservices', mono: 'Ms' },
-      { name: 'JWT Auth', mono: 'Jw' },
-      { name: 'Git / GitHub', mono: 'Gt' },
-      { name: 'Postman', mono: 'Pm' },
-    ],
-  },
+  id: 'infra',
+  title: 'Infra & Tools',
+  subtitle: 'Cloud infrastructure, deployment & development tools',
+  skills: [
+    { name: 'AWS', mono: 'Aw' },
+    { name: 'Amazon S3', mono: 'S3' },
+    { name: 'EC2', mono: 'Ec' },
+    { name: 'AWS Lambda', mono: 'La' },
+    { name: 'DynamoDB', mono: 'Db' },
+    { name: 'CloudWatch', mono: 'Cw' },
+    { name: 'Linux', mono: 'Li' },
+    { name: 'Git / GitHub', mono: 'Gt' },
+    { name: 'Postman', mono: 'Pm' },
+    { name: 'Docker', mono: 'Dk' },
+  ],
+},
   {
-    id: 'databases',
-    title: 'Databases',
-    subtitle: 'Indexing • Normalization',
-    skills: [
-      { name: 'PostgreSQL', mono: 'Pg' },
-      { name: 'MongoDB', mono: 'Mg' },
-      { name: 'MySQL', mono: 'My' },
-    ],
-  },
+  id: 'databases',
+  title: 'Databases',
+  subtitle: 'Database design, storage & management',
+  skills: [
+    { name: 'MongoDB', mono: 'Mg', note: 'Hands-on' },
+    { name: 'SQLite', mono: 'Sq', note: 'Hands-on' },
+    { name: 'Supabase', mono: 'Sb', note: 'Hands-on' },
+    { name: 'PostgreSQL', mono: 'Pg', note: 'Working Knowledge' },
+  ],
+},
   {
-    id: 'fundamentals',
-    title: 'CS Fundamentals',
-    subtitle: 'The foundations',
-    skills: [
-      { name: 'DSA', mono: 'Ds' },
-      { name: 'OS', mono: 'Os' },
-      { name: 'CN', mono: 'Cn' },
-      { name: 'DBMS', mono: 'Db' },
-      { name: 'OOPs', mono: 'Oo' },
-      { name: 'Collections', mono: 'Co' },
-      { name: 'Multithreading', mono: 'Mt' },
-    ],
-  },
+  id: 'fundamentals',
+  title: 'CS Fundamentals',
+  subtitle: 'Core computer science & problem-solving',
+  skills: [
+    { name: 'Data Structures & Algorithms', mono: 'DS' },
+    { name: 'Object-Oriented Programming', mono: 'OP' },
+    { name: 'DBMS', mono: 'DB' },
+    { name: 'Operating Systems', mono: 'OS' },
+    { name: 'Computer Networks', mono: 'CN' },
+  ],
+},
   {
-    id: 'interests',
-    title: 'Interests',
-    subtitle: 'Coming soon to the series',
-    skills: [
-      { name: 'System Design', mono: 'Sd' },
-      { name: 'Cloud Computing (AWS)', mono: 'Aw' },
-      { name: 'Machine Learning', mono: 'Ml' },
-    ],
-  },
+  id: 'interests',
+  title: 'Interests',
+  subtitle: 'Exploring emerging technologies & engineering',
+  skills: [
+    { name: 'Artificial Intelligence', mono: 'AI' },
+    { name: 'Natural Language Processing', mono: 'NLP' },
+    { name: 'Cloud Computing (AWS)', mono: 'Aw' },
+    { name: 'System Design', mono: 'Sd' },
+    { name: 'Generative AI & RAG', mono: 'AI' },
+    { name: 'Full-Stack Development', mono: 'FS' },
+  ],
+},
 ];
 
 /**
@@ -328,27 +388,51 @@ export const skillCategories: SkillCategory[] = [
  * where the skill appears in the projects, certifications or achievements on the resume.
  */
 export const skillEvidence: Record<string, string[]> = {
-  Java: ['Oracle Java Certified Foundations Associate', 'HackerRank 5-star'],
-  Python: ['PolicyGuard AI', 'Cisco Python Essentials 1', 'HackerRank 5-star'],
-  C: ['HackerRank 5-star'],
-  React: ['Payment Gateway System', 'Multi-Tenant SaaS Platform'],
-  HTML: ['Pearson IT Specialist – HTML and CSS', 'Cisco HTML Essentials'],
-  CSS: ['Pearson IT Specialist – HTML and CSS', 'Cisco CSS Essentials'],
-  JavaScript: ['Cisco JavaScript Essentials 1 & 2'],
-  'Node.js': ['Payment Gateway System', 'Multi-Tenant SaaS Platform'],
-  'Express.js': ['Payment Gateway System'],
-  Docker: ['Payment Gateway System'],
-  'Docker Compose': ['Multi-Tenant SaaS Platform'],
-  'REST APIs': ['PolicyGuard AI'],
-  Microservices: ['Payment Gateway System'],
-  'JWT Auth': ['Multi-Tenant SaaS Platform'],
-  'Git / GitHub': ['GitHub Foundations'],
-  PostgreSQL: ['Payment Gateway System', 'Multi-Tenant SaaS Platform'],
-  MongoDB: ['MongoDB Certified Associate Developer'],
-  DBMS: ['NPTEL Database Management System', 'Oracle Database Foundations'],
-  DSA: ['AlgoUniversity Tech Fellow', '850+ problems solved'],
-  'Cloud Computing (AWS)': ['AWS Certified AI Practitioner', 'AWS Academy Cloud Foundations'],
-  'Machine Learning': ['B.Tech AI & ML', 'NPTEL Deep Learning'],
+  'C++': ['CodeChef – 450+ problems solved', 'LeetCode – 1637 maximum rating'],
+  Python: ['Meaning – Semantic Search Engine', 'FairShare – Group Accountability System', 'Cisco Applied AI for Customer Review Analysis'],
+  JavaScript: ['ShopNow – Full Stack E-Commerce', 'Thiranex – Full Stack Internship'],
+  TypeScript: ['Ritnezz – Fitness Progressive Web App'],
+  SQL: ['FairShare – SQLite Database Design'],
+  Bash: ['DecodeLabs – Ubuntu Server Administration'],
+
+  React: ['Meaning – Semantic Search Engine', 'ShopNow – Full Stack E-Commerce', 'Thiranex – Full Stack Internship'],
+  'Next.js': ['Ritnezz – Fitness Progressive Web App'],
+  HTML: [],
+  CSS: ['Ritnezz – Tailwind CSS'],
+  'Tailwind CSS': ['Ritnezz – Fitness Progressive Web App'],
+
+  'Node.js': ['ShopNow – Full Stack E-Commerce', 'Thiranex – Full Stack Internship', 'AWS Lambda Project'],
+  'Express.js': ['ShopNow – Full Stack E-Commerce', 'Thiranex – Full Stack Internship'],
+  FastAPI: ['Meaning – Semantic Search Engine'],
+  Flask: ['FairShare – Group Accountability System'],
+  'REST APIs': ['Meaning – FastAPI', 'ShopNow – Express APIs'],
+  JWT: ['ShopNow – Role-Based Authentication'],
+
+  'AI/ML': ['B.E. Computer Science (AI & ML)', 'Deep Learning Projects'],
+  'Machine Learning': ['PyTorch – ANN, CNN and Transformer Projects', 'Cisco Applied AI for Customer Review Analysis'],
+  NLP: ['Meaning – Hybrid Semantic Search & RAG'],
+  FAISS: ['Meaning – Semantic Search Engine'],
+  RAG: ['Meaning – Retrieval-Augmented Generation'],
+  PyTorch: ['ANN, CNN and Transformer Implementations'],
+
+  AWS: ['DecodeLabs – Cloud Computing Internship', 'AWS Cloud Projects'],
+  'Amazon S3': ['AWS Static Website Hosting'],
+  EC2: ['DecodeLabs – Ubuntu EC2 Server'],
+  Lambda: ['Serverless API Project'],
+  DynamoDB: ['AWS Database Project'],
+  CloudWatch: ['Lambda Monitoring & Execution Logs'],
+  Linux: ['DecodeLabs – Ubuntu Server Administration'],
+
+  MongoDB: ['ShopNow – Full Stack E-Commerce'],
+  SQLite: ['FairShare – Group Accountability System'],
+  Supabase: ['Ritnezz – Fitness Progressive Web App'],
+
+  DSA: ['NPTEL – Algorithmic Graph Theory and Data Structures', '450+ CodeChef problems solved', '100+ LeetCode problems solved'],
+  'Object-Oriented Programming': ['B.E. Computer Science (AI & ML)'],
+  DBMS: ['FairShare – Database Design'],
+  'Git / GitHub': ['Full-Stack Development Projects'],
+  Postman: ['API Development & Testing']
+
 };
 
 export type Episode = {
@@ -376,117 +460,109 @@ const jade: Palette = { from: '#03150f', via: '#0d5a40', to: '#050a08', accent: 
 
 export const seasons: Season[] = [
   {
-    number: 1,
-    title: 'The Beginning',
-    period: '2021 – 2023',
-    synopsis: 'Intermediate years at Sri Chaitanya Junior College, Kakinada — Mathematics, Physics and Chemistry.',
-    episodes: [
-      {
-        code: 'S01 E01',
-        title: 'The Foundation',
-        description: 'BIEAP, MPC at Sri Chaitanya Junior College, Kakinada — finishing with a score of 925/1000.',
-        tags: ['MPC', 'BIEAP'],
-        runtime: 'Jun 2021 – May 2023',
-        palette: amber,
-      },
-    ],
-  },
-  {
-    number: 2,
-    title: 'Enter: AI & ML',
-    period: '2023 – Present',
-    synopsis: 'B.Tech in Artificial Intelligence and Machine Learning at Aditya Engineering College, Surampalem.',
-    episodes: [
-      {
-        code: 'S02 E01',
-        title: 'The Engineer',
-        description: 'Bachelor of Technology in Artificial Intelligence and Machine Learning — CGPA 9.10.',
-        tags: ['B.Tech', 'AI & ML', 'CGPA 9.10'],
-        runtime: 'Oct 2023 – Present',
-        palette: violet,
-      },
-      {
-        code: 'S02 E02',
-        title: 'The Topper',
-        description: 'AIML Branch Topper with a 9.24 SGPA for the semester.',
-        tags: ['9.24 SGPA', 'Branch Topper'],
-        runtime: 'One semester',
-        palette: crimson,
-      },
-      {
-        code: 'S02 E03',
-        title: 'The Problem Solver',
-        description: 'LeetCode 350+ (peak 1442), GFG 300+ (1436), CodeChef 200+ and HackerRank 5-star badges in C, Python, Java and SQL.',
-        tags: ['DSA', 'LeetCode', 'GFG', 'CodeChef', 'HackerRank'],
-        runtime: '850+ problems',
-        palette: jade,
-      },
-    ],
-  },
-  {
-    number: 3,
-    title: 'Learning to Build',
-    period: '2025 – 2026',
-    synopsis: 'One year of intensive Full-Stack Development training as a Trainee at Technical Hub Pvt Ltd.',
-    episodes: [
-      {
-        code: 'S03 E01',
-        title: 'The Trainee',
-        description: 'Intensive Full-Stack Development training covering frontend, backend, database integration and deployment workflows.',
-        tags: ['FSD', 'Frontend', 'Backend', 'Databases'],
-        runtime: 'May 2025 – Jun 2026',
-        palette: ocean,
-      },
-      {
-        code: 'S03 E02',
-        title: 'The Developer',
-        description: 'Developed responsive web applications — user interfaces, server-side logic and database connectivity.',
-        tags: ['React', 'Node.js', 'Express.js'],
-        runtime: 'Technical Hub',
-        palette: violet,
-      },
-      {
-        code: 'S03 E03',
-        title: 'The Deployer',
-        description: 'Deployed and managed web applications with version control, debugging and end-to-end development practices.',
-        tags: ['Git / GitHub', 'Deployment'],
-        runtime: 'Technical Hub',
-        palette: jade,
-      },
-    ],
-  },
-  {
-    number: 4,
-    title: 'Building Real Products',
-    period: '2026',
-    synopsis: 'Three Originals — an AI platform, a payment gateway and a multi-tenant SaaS — plus national-level recognition.',
-    episodes: [
-      {
-        code: 'S04 E01',
-        title: 'The AI Builder',
-        description: 'PolicyGuard AI — LLM-based Q&A and key-information extraction across 500+ policy documents at 92% accuracy.',
-        tags: ['Python', 'NLP', 'LLM'],
-        runtime: '2026',
-        palette: crimson,
-      },
-      {
-        code: 'S04 E02',
-        title: 'The Architect',
-        description: 'Payment Gateway System and Multi-Tenant SaaS Platform — state machines, microservices, tenant isolation and RBAC.',
-        tags: ['Node.js', 'PostgreSQL', 'Docker'],
-        runtime: '2026',
-        palette: amber,
-      },
-      {
-        code: 'S04 E03',
-        title: 'The Fellow',
-        description: 'Selected as a Tech Fellow at AlgoUniversity and reached the Semi-Finals of Flipkart GRiD 7.0.',
-        tags: ['AlgoUniversity', 'Flipkart GRiD 7.0'],
-        runtime: 'National stage',
-        palette: ocean,
-      },
-    ],
-  },
+  number: 1,
+  title: 'The Beginning',
+  period: '2022 – 2023',
+  synopsis: 'Higher secondary education at GVK Vidhya Mandhir, Coimbatore, with a focus on Mathematics, Physics and Chemistry.',
+  episodes: [
+    {
+      code: 'S01 E01',
+      title: 'The Foundation',
+      description: 'Completed Higher Secondary Education (HSC) with Mathematics, Physics and Chemistry, securing 1,034 out of 1,200.',
+      tags: ['HSC', 'Mathematics', 'Physics', 'Chemistry'],
+      runtime: 'Jun 2022 – May 2023',
+      palette: amber,
+    },
+  ],
+},
+{
+  number: 2,
+  title: 'Enter: AI & ML',
+  period: '2024 – Present',
+  synopsis: 'Pursuing a Bachelor of Engineering in Artificial Intelligence and Machine Learning at KIT, Coimbatore.',
+  episodes: [
+    {
+      code: 'S02 E01',
+      title: 'The Engineer',
+      description: 'Bachelor of Engineering in Computer Science (Artificial Intelligence and Machine Learning) at KIT, maintaining a CGPA of 8.40.',
+      tags: ['B.E.', 'AI & ML', 'CGPA 8.40'],
+      runtime: 'Sep 2024 – Present',
+      palette: violet,
+    },
+    {
+      code: 'S02 E02',
+      title: 'The Problem Solver',
+      description: 'Solved 450+ coding problems on CodeChef and achieved a maximum LeetCode contest rating of 1637, with 100+ problems solved.',
+      tags: ['DSA', 'CodeChef', 'LeetCode'],
+      runtime: 'Ongoing',
+      palette: jade,
+    },
+    {
+      code: 'S02 E03',
+      title: 'The Achiever',
+      description: 'Recognised among the top 5 CGPA holders in the class and earned the Salesforce Agentblazer Champion title.',
+      tags: ['Academic Excellence', 'Salesforce', 'Agentblazer Champion'],
+      runtime: '2025 – 2026',
+      palette: crimson,
+    },
+  ],
+},
+{
+  number: 3,
+  title: 'Learning to Build',
+  period: '2026',
+  synopsis: 'Stepping into professional development through hands-on internships in full-stack development and cloud computing.',
+  episodes: [
+    {
+      code: 'S03 E01',
+      title: 'The Full-Stack Developer',
+      description: 'Designed, developed and deployed four full-stack web applications during an internship at Thiranex.',
+      tags: ['React.js', 'Node.js', 'Express.js', 'Full-Stack'],
+      runtime: 'May 2026',
+      palette: violet,
+    },
+    {
+      code: 'S03 E02',
+      title: 'The Cloud Engineer',
+      description: 'Worked with AWS services including S3, EC2, DynamoDB and Lambda, while administering Ubuntu servers through SSH during an internship at DecodeLabs.',
+      tags: ['AWS', 'EC2', 'S3', 'Lambda', 'DynamoDB'],
+      runtime: 'May 2026',
+      palette: ocean,
+    },
+  ],
+},
+{
+  number: 4,
+  title: 'Building Real Products',
+  period: '2026',
+  synopsis: 'Turning technical knowledge into practical applications across AI, full-stack development, cloud computing and data-driven systems.',
+  episodes: [
+    {
+      code: 'S04 E01',
+      title: 'The AI Builder',
+      description: 'Built Meaning, a hybrid semantic search engine combining FAISS, BM25 and Retrieval-Augmented Generation to retrieve relevant information from customer-support records.',
+      tags: ['Python', 'NLP', 'FAISS', 'BM25', 'RAG'],
+      runtime: '2026',
+      palette: crimson,
+    },
+    {
+      code: 'S04 E02',
+      title: 'The Product Developer',
+      description: 'Developed ShopNow, a MERN-based e-commerce platform with role-based authentication, persistent carts, product management and order lifecycle handling.',
+      tags: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT'],
+      runtime: '2026',
+      palette: amber,
+    },
+    {
+      code: 'S04 E03',
+      title: 'The Systems Thinker',
+      description: 'Built FairShare, a group accountability system using weighted fairness scoring, and Ritnezz, a fitness progressive web app with workout tracking and nutrition analytics.',
+      tags: ['Python', 'Flask', 'SQLite', 'Next.js', 'Supabase'],
+      runtime: '2026',
+      palette: jade,
+    },
+  ],
+},
   {
     number: 5,
     title: "What's Next",
@@ -508,16 +584,67 @@ export const seasons: Season[] = [
 export type TopPick = { label: string; title: string; detail: string; palette: Palette };
 
 export const topPicks: TopPick[] = [
-  { label: 'Primary language', title: 'Java', detail: 'Listed as primary on the resume • Oracle certified', palette: amber },
-  { label: 'The AI Original', title: 'PolicyGuard AI', detail: '500+ documents • 92% accuracy', palette: crimson },
-  { label: 'Biggest stage', title: 'Flipkart GRiD 7.0', detail: 'Semi-Finalist', palette: ocean },
-  { label: 'National selection', title: 'AlgoUniversity', detail: 'Tech Fellow', palette: violet },
-  { label: 'Academic high', title: 'Branch Topper', detail: '9.24 SGPA in AI & ML', palette: jade },
-  { label: 'Cloud credential', title: 'AWS AI Practitioner', detail: 'AWS Certified', palette: amber },
-  { label: 'Problems solved', title: '850+', detail: 'LeetCode 350+ • GFG 300+ • CodeChef 200+', palette: crimson },
-  { label: 'The training arc', title: '1 Year of FSD', detail: 'Technical Hub Pvt Ltd', palette: ocean },
-  { label: 'Database credential', title: 'MongoDB', detail: 'Certified Associate Developer', palette: jade },
-  { label: 'Current focus', title: 'System Design', detail: 'with Cloud (AWS) & Machine Learning', palette: violet },
+  {
+    label: 'Academic standing',
+    title: 'Top 5 in Class',
+    detail: 'CGPA 8.40 • CSE (AI & ML)',
+    palette: jade,
+  },
+  {
+    label: 'Full-stack experience',
+    title: 'Thiranex',
+    detail: 'Full Stack Developer Intern • 4 applications deployed',
+    palette: ocean,
+  },
+  {
+    label: 'AI & NLP project',
+    title: 'Meaning',
+    detail: 'Built a semantic search engine using Sentence Transformers',
+    palette: crimson,
+  },
+  {
+    label: 'Cloud experience',
+    title: 'AWS Projects',
+    detail: 'Hands-on experience with S3, EC2, Lambda and DynamoDB',
+    palette: violet,
+  },
+  {
+    label: 'Problem solving',
+    title: '450+',
+    detail: 'CodeChef problems solved',
+    palette: amber,
+  },
+  {
+    label: 'LeetCode achievement',
+    title: 'Top 19.74%',
+    detail: 'Globally • Maximum rating 1637',
+    palette: ocean,
+  },
+  {
+    label: 'Industry recognition',
+    title: 'Salesforce Agentblazer',
+    detail: 'Champion • 48+ Trailhead badges',
+    palette: crimson,
+  },
+  {
+    label: 'Cloud credential',
+    title: 'AWS Academy',
+    detail: 'Graduate – Cloud Foundations',
+    palette: amber,
+  },
+  {
+    label: 'Leadership',
+    title: '400+ Students',
+    detail: 'Addressed incoming students during college orientation',
+    palette: jade,
+  },
+  {
+    label: 'International exposure',
+    title: 'Indo-Japan Programme',
+    detail: 'Welcomed Japanese delegates in their native language',
+    palette: violet,
+  },
+
 ];
 
 /** Slides for the "▶ Play Intro" cinematic sequence. */
@@ -526,40 +653,45 @@ export type IntroSlide = { kicker: string; title: string; lines: string[]; chips
 export const introSlides: IntroSlide[] = [
   {
     kicker: 'Education',
-    title: 'B.Tech · AI & ML',
-    lines: ['Aditya Engineering College, Surampalem', 'October 2023 – Present'],
-    chips: ['CGPA 9.10'],
+    title: 'B.E. · CSE (AI & ML)',
+    lines: ['KIT – Kalaignarkarunanidhi Institute of Technology, Coimbatore', 'Expected Graduation · September 2028'],
+    chips: ['CGPA 8.40'],
   },
   {
     kicker: 'Skills',
-    title: 'Java first.',
-    lines: ['Python, C, C++ · React, Node.js, Express.js', 'PostgreSQL, MongoDB, MySQL · Docker, REST, JWT'],
-    chips: ['Java', 'Python', 'React', 'Node.js', 'Docker', 'PostgreSQL'],
+    title: 'Software first.',
+    lines: ['C++, Python, Java · React, Next.js, Node.js, Express.js', 'MongoDB, PostgreSQL, SQLite · AWS, REST APIs, JWT'],
+    chips: ['C++', 'Python', 'React', 'Node.js', 'AWS', 'MongoDB'],
   },
   {
-    kicker: 'Training',
-    title: 'The Training Arc',
-    lines: ['One year of intensive Full‑Stack Development training', 'Trainee · Technical Hub Pvt Ltd · May 2025 – June 2026', 'Frontend · Backend · Databases · Deployment'],
+    kicker: 'Experience',
+    title: 'Building & Deploying',
+    lines: ['Full Stack Developer Intern · Thiranex · May 2026', 'Cloud Computing Intern · DecodeLabs · May 2026', 'Full-stack applications · AWS services · Deployment'],
   },
   {
     kicker: 'Projects',
-    title: 'Three Originals',
-    lines: ['PolicyGuard AI — 500+ documents, 92% accuracy', 'Payment Gateway — 1,000+ transactions, 99.8% uptime', 'Multi-Tenant SaaS — 50+ tenants, zero unauthorized access'],
+    title: 'Five Creations',
+    lines: ['ShopNow — Full-stack e-commerce platform', 'Meaning — NLP-powered semantic search engine', 'FairShare — Group accountability system', 'Ritnezz — Fitness progressive web app', 'AWS — Cloud deployment projects'],
   },
   {
     kicker: 'Achievements',
-    title: 'Top Moments',
-    lines: ['Tech Fellow — AlgoUniversity', 'Semi-Finalist — Flipkart GRiD 7.0', 'AIML Branch Topper — 9.24 SGPA'],
+    title: 'Beyond the Classroom',
+    lines: ['450+ Problems Solved — CodeChef', 'Top 19.74% Globally — LeetCode', 'Salesforce Agentblazer Champion — 48+ badges', 'Top 5 CGPA Holder — Academic Rank'],
   },
   {
     kicker: 'Certified',
-    title: '16 Certifications',
-    lines: ['AWS · MongoDB · Oracle · GitHub · Pearson', 'NPTEL · Cisco · Udemy'],
+    title: 'Technical Credentials',
+    lines: ['AWS Academy · Oracle Cloud Infrastructure', 'NPTEL · Cisco Networking Academy'],
+  },
+  {
+    kicker: 'Leadership',
+    title: 'Beyond Technology',
+    lines: ['Student Representative — 60+ students', 'Hosted Japanese delegates during Indo-Japan collaboration programme', 'Addressed 400+ students during college orientation'],
   },
   {
     kicker: 'Current mission',
-    title: 'Now exploring',
-    lines: ['System Design · Cloud Computing (AWS) · Machine Learning'],
+    title: 'Always evolving.',
+    lines: ['Software Engineering · AI/ML · Cloud Computing · Data Structures & Algorithms'],
   },
 ];
 
@@ -575,7 +707,7 @@ export const viewerProfiles: {
 }[] = [
   {
     id: 'sushmita',
-    name: 'Sushmita',
+    name: 'Rathi Varshini R',
     blurb: 'The full series, in order',
     color: '#e5132b',
     order: ['about', 'journey', 'originals', 'picks', 'skills', 'moments', 'story'],
