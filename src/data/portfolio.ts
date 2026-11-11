@@ -266,6 +266,8 @@ export type Certification = { issuer: string; name: string; link: string };
 export const certifications: Certification[] = [
   { issuer: 'NPTEL', name: 'Algorithmic Graph Theory and Data Structures', link: 'https://drive.google.com/file/d/1Y3GGtF6o2i4wBNV4XQw0a_FZ_PYwDR21/view?usp=drive_link' },
 
+  { issuer: 'NPTEL',name: 'Cloud Computing', link: 'https://drive.google.com/file/d/1UMLweYflTKNSBeL4nYqop8evPb2Lw5gK/view?usp=drivesdk'},
+
   { issuer: 'Infosys Springboard', name: 'Introduction to Robotic Process Automation', link: 'https://drive.google.com/file/d/16NCqIBNdiFr5W77VU3g1d2q75xEfnuQm/view?usp=drive_link' },
 
   { issuer: 'Infosys Springboard', name: 'Artificial Intelligence Primer Certification', link: 'https://drive.google.com/file/d/1D2nwsJTrRfFudNyUh__aUnElhP4ZLwBF/view?usp=drive_link' },
@@ -427,7 +429,7 @@ export const skillEvidence: Record<string, string[]> = {
   SQLite: ['FairShare – Group Accountability System'],
   Supabase: ['Ritnezz – Fitness Progressive Web App'],
 
-  DSA: ['NPTEL – Algorithmic Graph Theory and Data Structures', '450+ CodeChef problems solved', '100+ LeetCode problems solved'],
+  DSA: ['NPTEL – Algorithmic Graph Theory and Data Structures','NPTEL - Cloud Computing(Elite Silver)', '450+ CodeChef problems solved', '100+ LeetCode problems solved'],
   'Object-Oriented Programming': ['B.E. Computer Science (AI & ML)'],
   DBMS: ['FairShare – Database Design'],
   'Git / GitHub': ['Full-Stack Development Projects'],
